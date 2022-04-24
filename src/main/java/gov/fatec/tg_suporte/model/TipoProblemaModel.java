@@ -8,24 +8,24 @@ public class TipoProblemaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_tipo_problema;
+    private Integer id;
 
-    @Column(name = "descricao_problema", nullable = false)
-    private String descricao_problema;
+    @Column(name = "titulo", nullable = false)
+    private String titulo;
 
-    public Integer getId_tipo_problema() {
-        return id_tipo_problema;
+    public Integer getId() {
+        return id;
     }
 
-    public void setId_tipo_problema(Integer id_tipo_problema) {
-        this.id_tipo_problema = id_tipo_problema;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getDescricao_problema() {
-        return descricao_problema;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setDescricao_problema(String descricao_problema) {
-        this.descricao_problema = descricao_problema;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 }
