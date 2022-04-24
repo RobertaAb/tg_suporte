@@ -17,7 +17,7 @@ public class TipoProblemaController {
     final TipoProblemaService tipoProblemaService;
 
     public TipoProblemaController(TipoProblemaService tipoProblemaService) {
-        this.TipoProblemaService = tipoProblemaService;
+        this.tipoProblemaService = tipoProblemaService;
     }
 
     @PostMapping

@@ -1,6 +1,8 @@
 package gov.fatec.tg_suporte.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "procedimento")
 public class ProcedimentoModel {
@@ -59,5 +61,8 @@ public class ProcedimentoModel {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public void setRegistrationDate(LocalDateTime utc) {
     }
 }
