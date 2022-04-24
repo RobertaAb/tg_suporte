@@ -1,6 +1,4 @@
 package gov.fatec.tg_suporte.controller;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 import javax.validation.Valid;
 
@@ -31,7 +29,6 @@ public class UsuariosController {
         public ResponseEntity<Object> saveUsuarios(@RequestBody @Valid UsuariosDto usuariosDto){
             var usuariosModel = new UsuariosModel();
             BeanUtils.copyProperties(usuariosDto, usuariosModel);
-            usuariosModel.setRegistrationDate (LocalDateTime.now(ZoneId.of("UTC")));
             return ResponseEntity.status(HttpStatus.CREATED).body(usuariosService.save(usuariosModel));
         }
 
