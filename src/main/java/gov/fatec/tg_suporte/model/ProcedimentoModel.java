@@ -2,14 +2,15 @@ package gov.fatec.tg_suporte.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "procedimento")
 public class ProcedimentoModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
     @Column(name = "titulo", nullable = false)
     private String titulo;
@@ -18,7 +19,7 @@ public class ProcedimentoModel {
     private String solucao;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    private UsuariosModel usuariosModel;
+    private UsuarioModel usuarioModel;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private TipoProblemaModel tipoProblemaModel;
@@ -39,12 +40,12 @@ public class ProcedimentoModel {
         this.solucao = solucao;
     }
 
-    public UsuariosModel getUsuariosModel() {
-        return usuariosModel;
+    public UsuarioModel getUsuarioModel() {
+        return usuarioModel;
     }
 
-    public void setUsuariosModel(UsuariosModel usuariosModel) {
-        this.usuariosModel = usuariosModel;
+    public void setUsuarioModel(UsuarioModel usuarioModel) {
+        this.usuarioModel = usuarioModel;
     }
 
     public TipoProblemaModel getTipoProblemaModel() {
@@ -55,11 +56,11 @@ public class ProcedimentoModel {
         this.tipoProblemaModel = tipoProblemaModel;
     }
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

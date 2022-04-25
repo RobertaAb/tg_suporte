@@ -6,8 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.UUID;
+
 @Repository
-public interface TipoProblemaModelRepository extends JpaRepository<TipoProblemaModel, Integer> {
+public interface TipoProblemaRepository extends JpaRepository<TipoProblemaModel, UUID> {
 
     @Query("SELECT p FROM Procedimento p WHERE p.titulo = ?1")
     ProcedimentoModel findProcedimentoById(String titulo);

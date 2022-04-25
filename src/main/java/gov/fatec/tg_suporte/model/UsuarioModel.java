@@ -1,13 +1,14 @@
 package gov.fatec.tg_suporte.model;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
-@Table(name = "usuarios")
-public class UsuariosModel {
+@Table(name = "usuario")
+public class UsuarioModel {
 	@Id 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private UUID id;
 	
 	@Column(name = "nome", nullable = false)
 	private String nome;
@@ -33,11 +34,11 @@ public class UsuariosModel {
 	@Column(name = "salvar", nullable = false)
 	private String salvar;
 
-	public Integer getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

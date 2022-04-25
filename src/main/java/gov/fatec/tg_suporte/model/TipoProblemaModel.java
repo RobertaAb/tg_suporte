@@ -1,23 +1,25 @@
 package gov.fatec.tg_suporte.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "tipo_problema")
 public class TipoProblemaModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
     @Column(name = "titulo", nullable = false)
     private String titulo;
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -27,5 +29,8 @@ public class TipoProblemaModel {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public void setRegistrationDate(LocalDateTime utc) {
     }
 }
