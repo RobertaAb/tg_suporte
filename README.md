@@ -21,9 +21,7 @@ Absolutamente nenhuma geração de código e nenhum requisito para configuraçã
 <br>
 SpringBoot.Visão Geral. Acesso em 25/04/2022 as 14h50 pelo link:
 https://spring-io.translate.goog/projects/spring-boot?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
-<br>
-Saiba mais sobre o conjunto de produtos que ssutentam a plataforma como serviço mais inovadora da atualidade.HEROKU.Acesso em 25/04/2022 as 15h10 pelo link:
-https://www-heroku-com.translate.goog/products?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+
 
 <br>
 <br>
