@@ -16,9 +16,5 @@ public class TipoProblemaController {
     @Autowired
     TipoProblemaService tipoProblemaService;
 
-     @PostMapping
-    public ResponseEntity<Object> saveTipoProblema(@RequestBody @Valid TipoProblemaDto tipoProblemaDto){
-            return ResponseEntity.status(HttpStatus.CREATED).body(tipoProblemaService.save(tipoProblemaDto));
-    }
 
 }
